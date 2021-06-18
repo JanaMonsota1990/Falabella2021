@@ -80,9 +80,6 @@ public class StepDefinitions {
         System.out.println(SeleniumElementProductPage.toString());
 
         driver.findElement(SeleniumElementMainPage);
-
-
-
     }
 
 
@@ -90,8 +87,11 @@ public class StepDefinitions {
     @And("print price of the first element in (.*)")
     public void printPriceOfTheFirstElementIn(String element) {
         By SeleniumElementMainPage = SeleniumFunctions.getCompleteElement(element);
-        driver.findElement(SeleniumElementMainPage.linkText("$4.090"));
-        log.info(driver.findElement(SeleniumElementMainPage.linkText("$4.090")));
+        //driver.findElement(SeleniumElementMainPage.linkText("$4.090"));
+        //log.info(driver.findElement(SeleniumElementMainPage.linkText("$4.090")));
+        Object elementLinktext = driver.findElement(By.linkText("$4.090"));
+        System.out.println(elementLinktext.toString());
+
     }
 
     @Then("click on the (.*)")
@@ -112,11 +112,11 @@ public class StepDefinitions {
     public void theTestIsSuccessfull() {
         assert true;
     }
+    
     @Then("^I close the window")
     public void i_close_window() {
         driver.close();
     }
-
 
 
 }

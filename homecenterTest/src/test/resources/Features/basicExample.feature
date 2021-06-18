@@ -43,6 +43,7 @@ Feature: BasicExample
      Then I wait 3 seconds
      And I press enter on Search Bar
      Then I wait 3 seconds
+     ##The comparison is here, and from here fails
      And print price of the "main page price"
      Then click on the main page price
      And I wait 3 seconds

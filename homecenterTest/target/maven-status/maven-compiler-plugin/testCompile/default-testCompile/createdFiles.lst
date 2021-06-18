@@ -1,0 +1,5 @@
+StepDefinitions\StepDefinitions.class
+Functions\CreateDriver.class
+StepDefinitions\Hooks.class
+Functions\WebDriverFactory.class
+Functions\SeleniumFunctions.class
